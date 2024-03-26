@@ -1,0 +1,29 @@
+---
+
+writeGraphs: false
+writeGraphsDot: false
+
+contexts:
+  main:
+    instrument: false
+    mprotect_mode: true
+    selectors:
+      - "*.o"
+  library:
+    selectors:
+      - "libz.*"
+      - "libpng.*"
+    permissions:
+      readonly:
+        - /
+        - /home
+        - /bin
+        - /usr
+        - /lib
+        - /lib64
+        - /dev
+        - /etc
+      readwrite:
+        - /dev/shm
+        - /tmp
+      network: host

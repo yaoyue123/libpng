@@ -30,7 +30,7 @@ project(libpng
         VERSION ${PNGLIB_VERSION}
         LANGUAGES C ASM)
 
-option(CALIbuilder "Build with CALI" ON)  # Define CALIbuilder option
+option(CALIbuilder "Build with CALI" OFF)  # Define CALIbuilder option
 
 if(CALIbuilder)
     #######################cali
